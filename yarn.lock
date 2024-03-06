@@ -484,14 +484,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@gradio/client@npm:^0.12.1":
-  version: 0.12.1
-  resolution: "@gradio/client@npm:0.12.1"
+"@gradio/client@npm:^0.12.2":
+  version: 0.12.2
+  resolution: "@gradio/client@npm:0.12.2"
   dependencies:
     bufferutil: "npm:^4.0.7"
     semiver: "npm:^1.1.0"
     ws: "npm:^8.13.0"
-  checksum: 10c0/6c54543dcb3cf222dcc76d319f9be5ea9cdb74edc9af667e3cf948f2c55477a1a5aedfc842190c87b522d95cbf9b30ac1d00ce56142d048b301f907b897db7eb
+  checksum: 10c0/617c42aa301bb9178f9565bc617c1529ba51311a06c139a8ec27c9516be99499ff77ddef89651985e92a9112addd1297c6834ec65de845d0f97ed96dcdebb7d8
   languageName: node
   linkType: hard
 
@@ -2147,7 +2147,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "chpt@workspace:."
   dependencies:
-    "@gradio/client": "npm:^0.12.1"
+    "@gradio/client": "npm:^0.12.2"
     "@nestjs/common": "npm:^10.3.3"
     "@nestjs/core": "npm:^10.3.3"
     "@nestjs/platform-express": "npm:^10.3.3"
