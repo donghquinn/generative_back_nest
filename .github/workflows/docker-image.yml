@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest  # runner name : (ubuntu latest version) 
     steps:
     - name: Checkout Source Code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
@@ -21,7 +21,7 @@ jobs:
         username: ${{ secrets.DOCKER_USER }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - uses: actions/checkout@v3 # first action : checkout source code
+    - uses: actions/checkout@v4 # first action : checkout source code
     - name: registry login
       run: | # log into docker hub account
         docker build . --file Dockerfile --tag registry.andongh.com/${{secrets.IMAGE_NAME}}/${{secrets.IMAGE_NAME}}:latest
