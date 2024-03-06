@@ -1445,10 +1445,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/uuid@npm:^9.0.6":
-  version: 9.0.6
-  resolution: "@types/uuid@npm:9.0.6"
-  checksum: 10c0/8fb6b3a583a035b8e917192eeadaadadfbfd29315094aafd3478e11f11a986cb118ee0f388b15035fda063d9f1a32fa62e7a791215b762fe1e2c177929ca7146
+"@types/uuid@npm:^9.0.8":
+  version: 9.0.8
+  resolution: "@types/uuid@npm:9.0.8"
+  checksum: 10c0/b411b93054cb1d4361919579ef3508a1f12bf15b5fdd97337d3d351bece6c921b52b6daeef89b62340fd73fd60da407878432a1af777f40648cbe53a01723489
   languageName: node
   linkType: hard
 
@@ -2161,7 +2161,7 @@ __metadata:
     "@types/node": "npm:^20.10.6"
     "@types/nodemailer": "npm:^6.4.14"
     "@types/redis": "npm:^4.0.11"
-    "@types/uuid": "npm:^9.0.6"
+    "@types/uuid": "npm:^9.0.8"
     axios: "npm:^1.4.0"
     bignumber.js: "npm:^9.1.1"
     crypto: "npm:^1.0.1"
