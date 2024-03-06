@@ -1309,12 +1309,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jsonwebtoken@npm:^9.0.2":
-  version: 9.0.4
-  resolution: "@types/jsonwebtoken@npm:9.0.4"
+"@types/jsonwebtoken@npm:^9.0.6":
+  version: 9.0.6
+  resolution: "@types/jsonwebtoken@npm:9.0.6"
   dependencies:
     "@types/node": "npm:*"
-  checksum: 10c0/5fe728b8b295c6955857ffb1782e050447e607e97983fa854e84ad3458243ae9066729e161723066326fafa3377e0eb5c71afd9019b50796f0f9d281023f3c33
+  checksum: 10c0/9c29e3896e5fb6056e54d87514643e59e0cfb966ae25171a107776270195bba955f0373e98c8ed6450c145b18984f5df9cf0fcac360f382cec3c7c4d3510b202
   languageName: node
   linkType: hard
 
@@ -2156,7 +2156,7 @@ __metadata:
     "@types/crypto-js": "npm:^4"
     "@types/express": "npm:^4.17.20"
     "@types/jest": "npm:^29.5.12"
-    "@types/jsonwebtoken": "npm:^9.0.2"
+    "@types/jsonwebtoken": "npm:^9.0.6"
     "@types/multer": "npm:^1.4.11"
     "@types/node": "npm:^20.10.6"
     "@types/nodemailer": "npm:^6.4.14"
