@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types/**/*",
+    ],
+    "lib": ["ESNext"],
+    "allowJs": false,
+    "strict": true, 
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "@providers/*": ["providers/*"],
+      "@controllers/*": ["controllers/*"],
+      "@libraries/*": ["libraries/*"],
+      "@utilities/*": ["utilities/*"],
+      "@validators/*": ["validators/*"],
+      "@modules/*": ["modules/*"],
+      "@errors/*": ["errors/*"]
+    }
+  },
+  "include": ["src/**/*", "test/**/*", "jest.config.ts"],
+  "exclude": ["node_modules"],
+  "ts-node": {
+    "files": true
+  },
+}

@@ -1,0 +1,130 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Client {
+  uuid     String   @id @unique @default(uuid())
+  profileImage String?
+  name     String
+  email    String
+  memo     String?
+  password String
+  token    String
+  usage    Int @default(0)
+  // image Image[]
+  isLogin Boolean @default(false)
+  created  DateTime @default(now())
+  updated  DateTime @updatedAt
+  chat ChatGen[]
+  image ImageGen[]
+  song Song[]
+  sr SuperResolution[]
+}
+
+model ChatGen {
+  uuid             String   @id @default(uuid())
+  client_uuid String
+  client_rel Client @relation(fields: [client_uuid], references: [uuid], onDelete: Cascade)
+  model            String
+  content          String
+  role             String
+  name             String?
+  temperature      Int?
+  topP             Int?
+  number           Int?
+  stream           Boolean?
+  stop             String?
+  maxTokens        Int?
+  presencePenalty  Int?
+  frequencyPenalty Int?
+  user             String?
+  response         String[]
+  // usedToken Int[]
+  created          String
+}
+
+model ImageGen {
+  uuid    String  @id @unique @default(uuid())
+  client_uuid String
+  client_rel Client @relation(fields: [client_uuid], references: [uuid], onDelete: Cascade)
+  prompt  String
+  number  Int
+  size    String?
+  img     String
+  created String
+}
+
+model Song {
+  uuid            String   @id @unique @default(uuid())
+  client_uuid String
+  client_rel Client @relation(fields: [client_uuid], references: [uuid], onDelete: Cascade)
+  lyrics          String
+  emotion         String?
+  select          String
+  url             String?
+  status          String   @default("start")
+  created         DateTime @default(now())
+}
+
+model SuperResolution {
+  uuid String @id @default(uuid())
+  client_uuid String
+  client_rel Client @relation(fields: [client_uuid], references: [uuid], onDelete: Cascade)
+  task String?
+  raw_fileName String
+  resoluted_fileName String?
+  weights String?
+  raw_version_id String?
+  resoluted_version_id String?
+  status String
+  resoluted_url String?
+  is_success Boolean?
+  created DateTime @default(now())
+  updated DateTime @updatedAt()
+}
+
+
+// model Image {
+//   uuid     String   @id @default(uuid())
+//   // clientid String
+//   // author   Client   @relation(fields: [clientid], references: [uuid])
+//   fileName String
+//   originalName String
+//   size String
+//   mime String
+//   url String?
+//   usage String
+//   versionId String?
+//   status String
+//   created  DateTime @default(now())
+//   updated  DateTime @updatedAt
+// }
+
+
+
+
+
+// model Transaction {
+//   uuid    String   @id @default(uuid())
+//   txHash  String?
+//   from    String
+//   to      String
+//   value   BigInt
+//   nonce   BigInt   @default(0)
+//   is_sent Int      @default(0)
+//   created DateTime @default(now())
+//   updated DateTime @updatedAt
+// }
+
+enum RoleEnumType {
+  admin
+  user
+}

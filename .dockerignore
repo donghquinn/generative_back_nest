@@ -1,0 +1,9 @@
+.env
+.eslintrc.json
+.prettierrc
+.gitignore
+.prettierrc
+example.env
+*.env
+LICENSE
+README.md

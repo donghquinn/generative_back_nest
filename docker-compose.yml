@@ -1,0 +1,51 @@
+version: "3.7"
+services:
+  db:
+    image: postgres:15-alpine3.17
+    ports:
+      - 7432:5432
+    restart: always
+    container_name: gptdb
+    env_file:
+      - .postgres.env
+    volumes:
+      - ./gptData:/var/lib/postgresql/data
+
+  minio:
+    image: minio/minio
+    container_name: gptminio
+    expose:
+      - 9001
+      - 9000
+    volumes:
+      - minio_storage:/data
+    env_file:
+      - .minio.env
+    command: server --console-address ":9001" /data
+    networks:
+      - proxy
+
+  app:
+    depends_on:
+      - db
+      - minio
+    image: ${REGISTRY_URL}
+    # build:
+    #   context: .
+    #   dockerfile: ./Dockerfile
+    container_name: gpt
+    restart: unless-stopped
+    env_file:
+      - .env
+    expose:
+      - ${APP_PORT}
+    volumes:
+      - ./logs:/home/node/src/logs
+    networks:
+      - proxy
+      
+volumes:
+  minio_storage: {}
+networks:
+  proxy:
+    external: true
