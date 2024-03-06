@@ -2183,7 +2183,7 @@ __metadata:
     node-fetch: "npm:^3.3.2"
     nodemailer: "npm:^6.9.11"
     openai: "npm:^4.20.1"
-    prettier: "npm:^3.1.0"
+    prettier: "npm:^3.2.5"
     prisma: "npm:^5.10.2"
     redis: "npm:^4.6.13"
     reflect-metadata: "npm:^0.2.1"
@@ -5735,12 +5735,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "prettier@npm:3.1.0"
+"prettier@npm:^3.2.5":
+  version: 3.2.5
+  resolution: "prettier@npm:3.2.5"
   bin:
     prettier: bin/prettier.cjs
-  checksum: 10c0/a45ea70aa97fde162ea4c4aba3dfc7859aa6a732a1db34458d9535dc3c2c16d3bc3fb5689e6cd76aa835562555303b02d9449fd2e15af3b73c8053557e25c5b6
+  checksum: 10c0/ea327f37a7d46f2324a34ad35292af2ad4c4c3c3355da07313339d7e554320f66f65f91e856add8530157a733c6c4a897dc41b577056be5c24c40f739f5ee8c6
   languageName: node
   linkType: hard
 
